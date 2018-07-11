@@ -1,0 +1,146 @@
+/* pages/movie-detail/movie-detail.wxss */
+@import '../movie-rating/movie-rating';
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9e9e9;
+}
+.moviePic {
+  padding: 30rpx;
+  height: 300rpx;
+  width: 250rpx;
+}
+.moviePic image {
+  width: 100%;
+  height: 100%;
+}
+.detailWrapper {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  flex-direction: column;
+  background: #fff;
+  padding: 30rpx 20rpx;
+}
+.movieDetail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+}
+ .movieDetail .movieContent {
+  flex: 1;
+  align-self: flex-start;
+} 
+.movieDetail .movieContent text {
+  display: block;
+  margin-left: 0;
+}
+.movieDetail .movieContent .title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.movieDetail .movieContent .intro {
+  font-size: 20rpx;
+  color: #ccc;
+}
+.movieDetail .movieRating {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 40rpx;
+  text-align: center;
+  align-self: flex-end;
+  border: 1rpx solid black;
+  border-radius: 10rpx;
+}
+.movieDetail .movieRating .score {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: black;
+}
+.movieDetail .movieRating .wishCount {
+  margin-top: 10rpx;
+  font-size: 12rpx;
+  color: #ccc;
+}
+.movieLike {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: 30rpx auto;
+}
+.movieLike text {
+  flex: 1;
+  border: 1rpx solid orangered;
+  border-radius: 10rpx;
+  margin: 0 100rpx;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: orangered;
+}
+.movieIntro .summary {
+  display: block;
+  font-size: 32rpx;
+  color: #888;
+}
+.movieIntro .sumContent {
+  display: block;
+  height: 100rpx;
+  overflow: hidden;
+  font-size: 22rpx;
+  line-height: 1.6;
+  text-indent: 40rpx;
+}
+.movieIntro .extend {
+  height: 240rpx;
+  overflow: visible;
+}
+.movieIntro .infoGather {
+  display: none;
+}
+.movieIntro .show {
+  display: block;
+  color: lightgreen;
+  font-size: 26rpx;
+}
+.movieIntro .infoExtend {
+  display: block;
+  color: lightgreen;
+  font-size: 26rpx;
+}
+.movieIntro .hidden {
+  display: none;
+}
+.movieCasts {
+  margin-top: 20rpx;
+  width: 100%;
+  padding: 10rpx;
+}
+.caststitle {
+  font-size: 26rpx;
+  color: #888;
+}
+.scrollX {
+  white-space: nowrap;
+  width: 100%;
+}
+.castsContent {
+  display: inline-block;
+  margin-right: 10rpx;
+  width: 200rpx;
+  height: 270rpx;
+} 
+.castsContent image{
+  width: 100%;
+  height: 250rpx;
+}
+.castsContent .castsName {
+  display: block;
+  text-align: center;
+  font-size: 22rpx;
+  color: #888;
+}

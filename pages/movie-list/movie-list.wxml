@@ -1,0 +1,27 @@
+<!--pages/movie-list/movie-list.wxml-->
+<import src="/pages/movie-rating/movie-rating" />
+<template name="movie-list">
+  <view class='movie-wrapper'>
+    <view class='movie-content'>
+      <image class='poster' src='{{images.medium}}'  bindtap='toDetail' data-movie-id='{{id}}'></image>
+      <view class='movie-summary'  bindtap='toDetail'> 
+        <text class='name'> {{title}}</text>
+        <text class='director'>导演： {{allDirs}}</text>
+        <text class='casts'>主演： {{allCasts}}</text>
+        <text class='genres'>类型： {{allGenres}}</text>
+        <template is="rating" data="{{rating}}"></template>
+        <text class='wish-count' style="color: #9dbfff;">{{collect_count}}人想看</text>
+      </view>
+      <block wx:if="{{typeId == 'inTheater'}}"> 
+        <view class='buyTicket' bindtap='buyTicket'>
+          购票
+        </view>
+      </block>
+      <block wx:if="{{typeId == 'comingSoon'}}">
+        <view class='wishToSee' bindtap='wishTosee'>
+          想看
+        </view>
+      </block> 
+    </view>
+  </view>
+</template>

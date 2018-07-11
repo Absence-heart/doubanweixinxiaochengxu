@@ -1,0 +1,27 @@
+<!--pages/movie-more/movie-more.wxml-->
+<import src="/pages/movie-list/movie-list.wxml"/>
+<view>
+  <view class='session-tab'>
+    <text class='tab-name {{showInTheater ? "tab-select" : "tab-normal"}}' bindtap='selectTab' data-tab-id='inTheater'>正在热映</text>
+    <text class='tab-name {{showComingSoon ? "tab-select" : "tab-normal"}}' bindtap='selectTab' data-tab-id='comingSoon'>即将上映</text>
+  </view>
+  <view class='session-movie'>
+    <view class='session-content'>
+      <block wx:if="{{showInTheater}}">
+        <scroll-view scroll-y style='height: 100vh;' bindscrolltolower='loadMore'>
+          <block wx:for="{{inTheater.movies}}" wx:key="item">
+            <template is="movie-list" data="{{...item}}"></template>
+          </block>
+        </scroll-view>
+      </block>
+      <block wx:if="{{showComingSoon}}">
+         <scroll-view scroll-y style='height: 100vh;'  bindscrolltolower='loadMore'>
+          <block wx:for="{{comingSoon.movies}}" wx:key="item">
+            <template is="movie-list" data="{{...item}}"></template>
+          </block>
+        </scroll-view>
+      </block>
+    </view>
+  </view>
+</view>
+

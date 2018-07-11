@@ -1,0 +1,10 @@
+
+{
+  "pages": [
+  "pages/movie-detail/movie-detail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "影片详情"
+  }
+}

@@ -1,0 +1,59 @@
+/* pages/movie-rating/movie-rating.wxss */
+
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  margin: 10rpx 0;
+  position: relative;
+}
+
+.rating-star {
+  background-image: url(https://img3.doubanio.com/f/shire/b8f4c3672ef81106701071831e22422a745d3b74/pics/rating_icons/ic_rating_s.png);
+  width: 55px;
+  height: 11px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+.allstar10 {
+  background-position: 0 0;
+}
+.allstar9 {
+  background-position: 0 -11px;
+}
+.allstar8 {
+  background-position: 0 -22px;
+}
+.allstar7 {
+  background-position: 0 -33px;
+}
+.allstar6 {
+  background-position: 0 -44px;
+}
+.allstar5 {
+  background-position: 0 -55px;
+}
+.allstar4 {
+  background-position: 0 -66px;
+}
+.allstar3 {
+  background-position: 0 -77px;
+}
+.allstar2 {
+  background-position: 0 -88px;
+}
+.allstar1 {
+  background-position: 0 -99px;
+}
+.allstar0 {
+  background-position: 0 -110px;
+}
+
+.rating-average {
+  margin-left: 120rpx;
+  font-size: 20rpx;
+  height: 22rpx;
+  line-height: 22rpx;
+  color: #888;
+}

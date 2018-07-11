@@ -1,0 +1,51 @@
+/* pages/search/search.wxss */
+.search-input {
+  flex: 1;
+  font-size: 28rpx;
+  color: #4a4a4a;
+}
+.search-cancle {
+  width: 80rpx;
+  height: 50rpx; 
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 28rpx；
+}
+.search-list {
+  background: #fff;
+}
+.movie-wrapper {
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+.movie-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15rpx 0;
+}
+.movie-content .poster {
+  width: 80rpx;
+  height: 100rpx;
+}
+.total {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.total .title{
+  font-size: 32rpx;
+  color: #4a4a4a;
+  font-weight: 600;
+  width: 100%;
+}
+
+.total .desc {
+  color: #aaa;
+  font-size: 28rpx;
+  width: 100%;
+}
+

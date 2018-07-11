@@ -1,0 +1,43 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+<import src='../movie-rating/movie-rating'/>
+<view class='wrapper'>
+  <view class='moviePic'>
+    <image src='{{movieDetail.images.medium}}'></image>
+  </view>
+  <view class='detailWrapper'>
+    <view class='movieDetail'>
+      <view class='movieContent'>
+        <text class='title'>{{movieDetail.title}}</text>
+        <text class='intro'>{{secondInfo}}</text>
+        <text class='intro'>原名：{{movieDetail.aka[0]}}</text>
+        <text class='intro'>国家： {{movieDetail.countries[0]}}</text>
+      </view>
+      <view class='movieRating'>
+        <text class='score'>{{movieDetail.rating.average}}</text>
+        <template is='movie-rating' data='{{...movieDetail}}'></template>
+        <text class='wishCount'>{{movieDetail.wish_count}}人想看</text>
+      </view>
+    </view>
+    <view class='movieLike'>
+      <text>想看</text>
+      <text>看过</text>
+    </view>
+    <view class='movieIntro'>
+      <text class='summary'>简介</text>
+      <text class='sumContent {{flag && "extend"}}'>{{movieDetail.summary}}</text>
+      <view class='infoExtend {{flag && "hidden"}}' bindtap='extend'>展开</view>
+      <view class='infoGather {{flag && "show"}}' bindtap='gather'>收起</view>
+    </view>
+    <view class='movieCasts'>
+      <text class='caststitle'>影人</text>
+        <scroll-view scroll-x class='scrollX'>
+          <block wx:for='{{movieDetail.casts}}' wx:key='{{item}}'>
+            <view class='castsContent'>
+              <image src='{{item.avatars.medium}}'></image>
+              <text class='castsName'>{{item.name}}</text>
+            </view>
+          </block>
+        </scroll-view>
+    </view>
+  </view>
+</view>
